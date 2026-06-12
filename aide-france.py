@@ -49,10 +49,10 @@ IDIOMA_ACTUAL = None
 
 VERSION = "1.0"
 PUERTO = 5015
-ARCHIVO_DATOS = 'aide_france_data.json'
+ARCHIVO_DATOS = 'aide-france_data.json'
 ARCHIVO_CACHE = 'url_cache_france.json'
 ARCHIVO_ESTADO = 'estado_fuentes_france.json'
-ARCHIVO_BACKUP = 'aide_france_backup.json'
+ARCHIVO_BACKUP = 'aide-france_backup.json'
 PAGINAS_BUSQUEDA = 3   # Reducido para no saturar, pero con paginación real
 TIMEOUT = 25
 MAX_INTENTOS = 3
