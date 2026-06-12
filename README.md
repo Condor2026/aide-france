@@ -228,8 +228,8 @@ python --version
 
 ```bash
 # PASO 1: Cloner le dépôt
-git clone https://github.com/Condor2026/aide-france
-cd aide-france
+git clone https://github.com/Condor2026/aide_france
+cd aide_france
 
 # PASO 2: Créer environnement virtuel
 python3 -m venv venv
@@ -243,15 +243,15 @@ pip install -r requirements.txt
 python3 -c "import requests, bs4, flask; print('✅ Tout est correct')"
 
 # PASO 5: Lancer
-python3 aide-france.py
+python3 aide_france.py
 ```
 
 ### 🪟 Windows
 
 ```powershell
 # PASO 1: Cloner le dépôt
-git clone https://github.com/Condor2026/aide-france
-cd aide-france
+git clone https://github.com/Condor2026/aide_france
+cd aide_france
 
 # PASO 2: Créer environnement virtuel
 python -m venv venv
@@ -265,17 +265,17 @@ pip install -r requirements.txt
 python -c "import requests, bs4, flask; print('✅ Tout est correct')"
 
 # PASO 5: Lancer
-python aide-france.py
+python aide_france.py
 ```
 
 ### 🐳 Docker
 
 ```bash
 # Construire l'image
-docker build -t aide-france .
+docker build -t aide_france .
 
 # Exécuter le conteneur
-docker run -p 5015:5015 aide-france
+docker run -p 5015:5015 aide_france
 
 # Ou avec docker-compose
 docker-compose up -d
@@ -562,7 +562,7 @@ Quand vous lancez l'**Option 5**, un serveur web démarre sur `http://localhost:
 ```
 aide-france/
 │
-├── 📄 aide-france.py              # Script principal (2000+ lignes)
+├── 📄 aide_france.py              # Script principal (2000+ lignes)
 ├── 📄 requirements.txt            # Dépendances Python
 ├── 📄 README.md                   # Ce document
 ├── 📄 LICENSE                     # GPL v3
@@ -577,7 +577,7 @@ aide-france/
 ├── 🗺️ url_cache_france.json       # Cache URLs découvertes
 ├── 📡 etat_sources_france.json    # État de chaque source
 │
-├── 📤 aide-france_export.json     # Export manuel (JSON)
+├── 📤 aide_france_export.json     # Export manuel (JSON)
 ├── 📤 aide_france_export.csv      # Export manuel (CSV)
 ├── 📤 aide_france_report.html     # Export manuel (HTML)
 │
@@ -602,118 +602,7 @@ aide-france/
 | `etat_sources_france.json` | Option 8 | État sources (actif/inactif) |
 | `aide_france_backup.json` | Chaque sauvegarde | Copie automatique |
 
----
 
-## DÉPANNAGE / SOLUCIÓN DE PROBLEMAS / RISOLUZIONE PROBLEMI
-
-### ❌ Erreur: ModuleNotFoundError
-
-```bash
-# Solution
-pip install -r requirements.txt
-# ou
-pip install requests beautifulsoup4 flask lxml
-```
-
-### ❌ Erreur: Port 5015 already in use
-
-```bash
-# Solution: Changer le port dans aide_france.py (ligne ~50)
-PUERTO = 5016  # Change le numéro
-```
-
-### ❌ Erreur: Permission denied (Linux/Mac)
-
-```bash
-chmod +x aide_france.py
-python3 aide_france.py
-```
-
-### ❌ Beaucoup de sources INACTIVE / Muchas fuentes INACTIVE
-
-```bash
-# Solution
-➤ Option / Opción / Opzione : 8
-
-# Le système cherchera automatiquement les URLs alternatives
-```
-
-### ❌ Aucun avis trouvé / No se encuentran avisos
-
-```bash
-# Solution 1: Vérifier sources actives
-➤ Option : 8
-
-# Solution 2: Augmenter pages (dans aide_france.py)
-PAGINAS_BUSQUEDA = 6  # Au lieu de 3
-
-# Solution 3: Réessayer recherche
-➤ Option : 1
-```
-
-### ❌ Dashboard web ne charge pas les graphiques
-
-```bash
-# Cause: Pas de connexion internet (CDN Chart.js)
-# Solution: Se connecter à internet ou télécharger Chart.js localement
-```
-
-### ❌ Les données ne se sauvegardent pas
-
-```bash
-# Vérifier permissions
-ls -la aide_france_data.json
-
-# Créer fichier vide si inexistant
-echo '{"avisos": [], "ultima_actualizacion": null}' > aide_france_data.json
-```
-
----
-
-## QUESTIONS FRÉQUENTES / PREGUNTAS FRECUENTES / DOMANDE FREQUENTI
-
-### ❓ À quelle fréquence mettre à jour les données?
-
-**Recommandation:** Une fois par jour, le matin (8-9h) pour capturer les actualités de la veille.
-
-### ❓ Peut-on automatiser les recherches?
-
-**Oui,** avec cron (Linux/Mac):
-
-```bash
-# Éditer crontab
-crontab -e
-
-# Ajouter ligne (exécute à 8h)
-0 8 * * * cd /chemin/aide-france && python3 aide-france.py -auto
-```
-
-**Windows (Planificateur de tâches):**
-- Créer tâche basique
-- Déclencheur: Quotidien 8h00
-- Action: `python C:\chemin\aide-france\aide-france.py`
-
-### ❓ Les données sont-elles en temps réel?
-
-**Non exactement.** Ça dépend de:
-1. Quand les médias publient les actualités
-2. Quand vous exécutez le scraper
-
-**Latence typique:** 12-24 heures
-
-### ❓ Puis-je ajouter mes propres sources?
-
-**Oui.** Éditez la liste `FUENTES_BASE` dans `aide-france.py`:
-
-```python
-{
-    'nombre': 'Ma Source',
-    'url': 'https://exemple.com/aide-sociale/',
-    'base': 'https://exemple.com',
-    'departement': 'Paris',
-    'categorie': 'local'
-}
-```
 
 ### ❓ Est-ce légal? / ¿Es legal? / È legale?
 
