@@ -1285,30 +1285,30 @@ def mostrar_menu_principal():
     stats = gestor_global.estadisticas()
     activas = len([f for f in fuentes_global if f.get('activo', True)])
     print(f"""
-{Color.RED}╔{'═' * 70}╗{Color.RESET}
-{Color.RED}║{Color.BOLD}{Color.WHITE}  🇫🇷 {t('app_name')}{' ' * 45}{Color.RED}║{Color.RESET}
-{Color.RED}╠{'═' * 70}╣{Color.RESET}
-{Color.RED}║{Color.CYAN}  📊 {t('stats_total')}: {stats['total']} {t('incidentes')}{' ' * 37}{Color.RED}║{Color.RESET}
-{Color.RED}║{Color.YELLOW}  📰 {t('fuentes')}: {activas} de {len(fuentes_global)}{' ' * 38}{Color.RED}║{Color.RESET}
-{Color.RED}║{Color.GREEN}  🏴 {t('departamentos')}: {len(stats['departements'])}{' ' * 39}{Color.RED}║{Color.RESET}
-{Color.RED}╚{'═' * 70}╝{Color.RESET}
+{Color.RED}╔{'═' * 56}╗{Color.RESET}
+{Color.RED}║{Color.BOLD}{Color.WHITE}  🇫🇷 {t('app_name')}{' ' * 28}{Color.RED}║{Color.RESET}
+{Color.RED}╠{'═' * 56}╣{Color.RESET}
+{Color.RED}║{Color.CYAN}  📊 {t('stats_total')}: {stats['total']}{' ' * 28}{Color.RED}║{Color.RESET}
+{Color.RED}║{Color.YELLOW}  📰 {t('fuentes')}: {activas}/{len(fuentes_global)}{' ' * 26}{Color.RED}║{Color.RESET}
+{Color.RED}║{Color.GREEN}  🏴 {t('departamentos')}: {len(stats['departements'])}{' ' * 26}{Color.RED}║{Color.RESET}
+{Color.RED}╚{'═' * 56}╝{Color.RESET}
 
-{Color.YELLOW}┌{'─' * 50}┐{Color.RESET}
-{Color.YELLOW}│{Color.CYAN}  📋 {t('menu_title')}{' ' * 36}{Color.YELLOW}│{Color.RESET}
-{Color.YELLOW}├{'─' * 50}┤{Color.RESET}
-{Color.YELLOW}│{Color.GREEN}  [1] 🔍 {t('cmd_buscar')}{' ' * 33}{Color.YELLOW}│{Color.RESET}
-{Color.YELLOW}│{Color.GREEN}  [2] 📊 {t('cmd_analisis')}{' ' * 32}{Color.YELLOW}│{Color.RESET}
-{Color.YELLOW}│{Color.GREEN}  [3] 🔗 {t('cmd_conexiones')}{' ' * 30}{Color.YELLOW}│{Color.RESET}
-{Color.YELLOW}│{Color.GREEN}  [4] 📈 {t('cmd_evolucion')}{' ' * 33}{Color.YELLOW}│{Color.RESET}
-{Color.YELLOW}│{Color.GREEN}  [5] 🌐 {t('cmd_web')}{' ' * 37}{Color.YELLOW}│{Color.RESET}
-{Color.YELLOW}│{Color.GREEN}  [6] 📰 {t('cmd_ultimos')}{' ' * 34}{Color.YELLOW}│{Color.RESET}
-{Color.YELLOW}│{Color.GREEN}  [7] 📥 {t('cmd_exportar')}{' ' * 34}{Color.YELLOW}│{Color.RESET}
-{Color.YELLOW}│{Color.GREEN}  [8] 🔍 {t('cmd_verificar')}{' ' * 33}{Color.YELLOW}│{Color.RESET}
-{Color.YELLOW}│{Color.GREEN}  [9] 📊 {t('cmd_tipos')}{' ' * 35}{Color.YELLOW}│{Color.RESET}
-{Color.YELLOW}│{Color.GREEN}  [10] 📈 {t('cmd_estadisticas')}{' ' * 28}{Color.YELLOW}│{Color.RESET}
-{Color.YELLOW}│{Color.GREEN}  [11] 🧹 {t('cmd_limpiar')}{' ' * 35}{Color.YELLOW}│{Color.RESET}
-{Color.YELLOW}│{Color.RED}  [12] 🗑️ {t('cmd_salir')}{' ' * 37}{Color.YELLOW}│{Color.RESET}
-{Color.YELLOW}└{'─' * 50}┘{Color.RESET}
+{Color.YELLOW}┌{'─' * 46}┐{Color.RESET}
+{Color.YELLOW}│{Color.CYAN}  📋 {t('menu_title')}{' ' * 29}{Color.YELLOW}│{Color.RESET}
+{Color.YELLOW}├{'─' * 46}┤{Color.RESET}
+{Color.YELLOW}│{Color.GREEN}  1. 🔍 {t('cmd_buscar')}{' ' * 22}{Color.YELLOW}│{Color.RESET}
+{Color.YELLOW}│{Color.GREEN}  2. 📊 {t('cmd_analisis')}{' ' * 14}{Color.YELLOW}│{Color.RESET}
+{Color.YELLOW}│{Color.GREEN}  3. 🔗 {t('cmd_conexiones')}{' ' * 14}{Color.YELLOW}│{Color.RESET}
+{Color.YELLOW}│{Color.GREEN}  4. 📈 {t('cmd_evolucion')}{' ' * 17}{Color.YELLOW}│{Color.RESET}
+{Color.YELLOW}│{Color.GREEN}  5. 🌐 {t('cmd_web')}{' ' * 24}{Color.YELLOW}│{Color.RESET}
+{Color.YELLOW}│{Color.GREEN}  6. 📰 {t('cmd_ultimos')}{' ' * 15}{Color.YELLOW}│{Color.RESET}
+{Color.YELLOW}│{Color.GREEN}  7. 📥 {t('cmd_exportar')}{' ' * 14}{Color.YELLOW}│{Color.RESET}
+{Color.YELLOW}│{Color.GREEN}  8. 🔍 {t('cmd_verificar')}{' ' * 16}{Color.YELLOW}│{Color.RESET}
+{Color.YELLOW}│{Color.GREEN}  9. 📊 {t('cmd_tipos')}{' ' * 14}{Color.YELLOW}│{Color.RESET}
+{Color.YELLOW}│{Color.GREEN} 10. 📈 {t('cmd_estadisticas')}{' ' * 22}{Color.YELLOW}│{Color.RESET}
+{Color.YELLOW}│{Color.GREEN} 11. 🧹 {t('cmd_limpiar')}{' ' * 12}{Color.YELLOW}│{Color.RESET}
+{Color.YELLOW}│{Color.RED} 12. 🗑️ {t('cmd_salir')}{' ' * 22}{Color.YELLOW}│{Color.RESET}
+{Color.YELLOW}└{'─' * 46}┘{Color.RESET}
 """)
 
 def menu():
