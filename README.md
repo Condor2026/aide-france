@@ -228,7 +228,7 @@ python --version
 
 ```bash
 # PASO 1: Cloner le dépôt
-git clone https://github.com/tu-usuario/aide-france.git
+git clone https://github.com/tu-usuario/aide-france
 cd aide-france
 
 # PASO 2: Créer environnement virtuel
@@ -250,7 +250,7 @@ python3 aide_france.py
 
 ```powershell
 # PASO 1: Cloner le dépôt
-git clone https://github.com/tu-usuario/aide-france.git
+git clone https://github.com/tu-usuario/aide-france
 cd aide-france
 
 # PASO 2: Créer environnement virtuel
