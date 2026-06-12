@@ -1,7 +1,7 @@
 ---
 # 📄🇫🇷⚖️ AVISO LEGAL Y ÉTICO / AVIS LÉGAL ET ÉTHIQUE / AVVISO LEGALE ED ETICO
 
-## AIDE FRANCE v1.0 - Plateforme d'entraide sociale
+## AIDE FRANCE v3.0 - Plateforme d'entraide sociale
 
 ---
 
@@ -112,7 +112,7 @@ Las noticias escaneadas pertenecen a sus respectivos medios de comunicación:
 El código de AIDE FRANCE es open source bajo licencia **GPLv3**.
 
 ```
-Copyright (C) 2026 Condor2026 / SpectrumSecurity
+Copyright (C) 2026 aide_france Condor2026 / SpectrumSecurity
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
