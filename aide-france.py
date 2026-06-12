@@ -62,7 +62,7 @@ DELAY_MAX = 2.0
 def mostrar_banner_idioma():
     print(f"""
 {Color.CYAN}╔════════════════════════════════════════════════════════════════════╗
-║                                                                     ║
+║                                                                    ║
 ║   🇫🇷 AIDE FRANCE v{VERSION} - PLATEFORME D'ENTRAIDE SOCIALE              ║
 ║                                                                    ║
 ║   "Surveiller pour aider, pas pour stigmatiser. Données publiques, ║
@@ -73,11 +73,11 @@ def mostrar_banner_idioma():
 
 def mostrar_menu_idioma():
     print(f"\n{Color.YELLOW}┌{'─' * 58}┐{Color.RESET}")
-    print(f"{Color.YELLOW}│{Color.CYAN}  🌍 SELECCIONE IDIOMA / CHOISISSEZ LA LANGUE / SCEGLI LINGUA    {Color.YELLOW} │{Color.RESET}")
+    print(f"{Color.YELLOW}│{Color.CYAN}  🌍 SELECCIONE IDIOMA / CHOISISSEZ LA LANGUE / SCEGLI LINGUA {Color.YELLOW} │{Color.RESET}")
     print(f"{Color.YELLOW}├{'─' * 58}┤{Color.RESET}")
-    print(f"{Color.YELLOW}│{Color.GREEN}  [1] Español                                                    {Color.YELLOW}│{Color.RESET}")
-    print(f"{Color.YELLOW}│{Color.GREEN}  [2] Français                                                   {Color.YELLOW}│{Color.RESET}")
-    print(f"{Color.YELLOW}│{Color.GREEN}  [3] Italiano                                                   {Color.YELLOW}│{Color.RESET}")
+    print(f"{Color.YELLOW}│{Color.GREEN}  [1] Español                      {Color.YELLOW}│{Color.RESET}")
+    print(f"{Color.YELLOW}│{Color.GREEN}  [2] Français                     {Color.YELLOW}│{Color.RESET}")
+    print(f"{Color.YELLOW}│{Color.GREEN}  [3] Italiano                     {Color.YELLOW}│{Color.RESET}")
     print(f"{Color.YELLOW}└{'─' * 58}┘{Color.RESET}")
 
 def seleccionar_idioma():
